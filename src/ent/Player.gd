@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(int) var max_speed = 50
+export(int) var max_speed = 100
 
 var velocity = Vector2.ZERO
 
@@ -95,3 +95,6 @@ func handle_input():
 		# Moving down
 		elif velocity.y < 0:
 			anim_dir = dir.B
+	
+	velocity.x *= speed
+	velocity.y *= speed
