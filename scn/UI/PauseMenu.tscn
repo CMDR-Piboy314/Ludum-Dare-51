@@ -4,8 +4,9 @@
 [ext_resource path="res://res/fnt/ludum/ludum.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://src/ui/BackPauseBtn.gd" type="Script" id=3]
 [ext_resource path="res://scn/UI/Buttons/QuitBtn.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scn/UI/Buttons/QuitBtn.gd" type="Script" id=5]
+[ext_resource path="res://src/ui/QuitBtn.gd" type="Script" id=5]
 [ext_resource path="res://theme01.tres" type="Theme" id=6]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 8
