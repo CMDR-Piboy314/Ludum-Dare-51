@@ -29,7 +29,7 @@ window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/node_library/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [gui]
 

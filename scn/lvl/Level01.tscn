@@ -30,7 +30,6 @@ format = 1
 tile_data = PoolIntArray( 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-
 position = Vector2( 120, 67 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
