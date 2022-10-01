@@ -3,8 +3,9 @@ extends RigidBody2D
 signal path_changed(path)
 
 export(float) var max_speed = 0.5
-export(int) var max_health = 110
+export(int) var max_health = 10
 export(int) var max_damage = 10
+export(Color) var dead_colour
 
 var speed = max_speed
 var health = max_health
@@ -128,5 +129,9 @@ func _on_Hitbox_area_entered(area):
 		if health < 1:
 			target.health -= (damage * 3)
 			damage = 0
+			$CollisionShape2D.set_deferred("disabled", true)
+			$Sprite.modulate = dead_colour
+		else:
+			$CollisionShape2D.set_deferred("disabled", false)
 		
 		target.health -= (damage)

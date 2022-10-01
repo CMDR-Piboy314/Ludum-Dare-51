@@ -88,17 +88,18 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 5, 2 )
+extents = Vector2( 5, 9 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 256, 256 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 5, 7.5 )
+extents = Vector2( 6, 8.5 )
 
 [node name="Ghost01" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource( 2 )
+dead_colour = Color( 0.568627, 0.560784, 0.564706, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -113,7 +114,8 @@ anims/walk_l = SubResource( 4 )
 anims/walk_r = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 8 )
+visible = false
+position = Vector2( 0, 1 )
 shape = SubResource( 6 )
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -130,6 +132,7 @@ texture = ExtResource( 3 )
 energy = 0.5
 
 [node name="Hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 0, -0.5 )
