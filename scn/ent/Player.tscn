@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/ent/Player.gd" type="Script" id=1]
 [ext_resource path="res://res/img/ent/player/player.png" type="Texture" id=2]
 [ext_resource path="res://addons/node_library/scripts/shaky_camera_2d.gd" type="Script" id=3]
+[ext_resource path="res://res/img/light.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 1 )
@@ -135,3 +136,8 @@ anims/walk_b = SubResource( 5 )
 anims/walk_f = SubResource( 4 )
 anims/walk_l = SubResource( 6 )
 anims/walk_r = SubResource( 7 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 4 )
+texture_scale = 4.0
+shadow_enabled = true
