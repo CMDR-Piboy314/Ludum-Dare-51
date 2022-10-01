@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scn/UI/Buttons/BackBtn.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scn/UI/Buttons/BackBtn.gd" type="Script" id=2]
+[ext_resource path="res://scn/UI/buttons/BackBtn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/ui/BackBtn.gd" type="Script" id=2]
+[ext_resource path="res://theme01.tres" type="Theme" id=3]
 [ext_resource path="res://res/fnt/ludum/ludum.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -25,6 +26,7 @@ margin_left = -25.0
 margin_top = -23.0
 margin_right = 26.0
 margin_bottom = -3.0
+theme = ExtResource( 3 )
 script = ExtResource( 2 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
@@ -56,6 +58,7 @@ margin_top = 13.0
 margin_right = 194.0
 margin_bottom = 94.0
 size_flags_vertical = 3
+theme = ExtResource( 3 )
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
 margin_right = 95.0
