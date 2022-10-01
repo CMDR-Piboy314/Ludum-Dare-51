@@ -1,17 +1,22 @@
-extends Label
+extends TextureProgress
 
-var countdown = 10
+var amount = 0
+var demo = true
+var negative = false
 
 func _process(delta):
-	countdown -= delta
-	
-	if (countdown <= 1):
-		countdown = 10 + countdown
-	
-	var displayTime = "%02d" % [fmod(countdown, 60)]
-	text = "Next event: " + displayTime
-
-
+	if demo:
+		if !negative:
+			amount += 100 * delta
+		else:
+			amount -= 100 * delta
+		if amount > 100:
+			amount = 100
+			negative = !negative
+		if amount < 0:
+			amount = 0
+			negative = !negative
+	self.value = amount
 
 # Declare member variables here. Examples:
 # var a = 2

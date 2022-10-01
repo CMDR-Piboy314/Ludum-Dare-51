@@ -1,15 +1,11 @@
 extends Label
 
-var countdown = 10
+var timer = 10
 
 func _process(delta):
-	countdown -= delta
-	
-	if (countdown <= 1):
-		countdown = 10 + countdown
-	
-	var displayTime = "%02d" % [fmod(countdown, 60)]
-	text = "Next event: " + displayTime
+	timer += delta
+	var displayTime = "%02d : %02d : %02d" % [fmod(timer, 60 * 60) / 60, fmod(timer, 60), fmod(timer, 1) * 1000]
+	text = displayTime
 
 
 
