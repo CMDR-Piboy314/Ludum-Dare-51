@@ -43,3 +43,5 @@ process_material = SubResource( 2 )
 texture = ExtResource( 1 )
 hframes = 2
 frame = 1
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
