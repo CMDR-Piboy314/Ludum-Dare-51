@@ -84,6 +84,20 @@ margin_top = 43.0
 margin_right = 36.0
 margin_bottom = 43.0
 
+[node name="Temp" type="Label" parent="Menu/CenterRow/CenterContainer"]
+margin_top = 38.0
+margin_right = 72.0
+margin_bottom = 47.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 1 )
+text = "Tutorial"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_editor_description_": "This will be replaced by the logo"
+}
+
 [node name="Label" type="Label" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
