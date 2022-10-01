@@ -1,10 +1,13 @@
 extends VBoxContainer
 
+export(PackedScene) onready var play_scn
+export(PackedScene) onready var stng_scn
+
 func _on_NewGameBtn_pressed():
-	get_tree().change_scene("res://scn/lvl/Level01.tscn")
+	var trash = get_tree().change_scene(play_scn)
 
 func _on_SettingsBtn_pressed():
-	get_tree().change_scene("res://scn/UI/Settings.tscn")
+	var trash = get_tree().change_scene(stng_scn)
 
 func _on_QuitBtn_pressed():
 	get_tree().quit()
