@@ -17,7 +17,13 @@ enum dir {
 
 var current_dir = dir.F
 var anim_dir = dir.F
-var anim_dir_str = "f"
+
+enum state {
+	IDLE,
+	WALK
+}
+
+var current_state = state.IDLE
 
 func _ready():
 	pass
@@ -28,7 +34,7 @@ func _physics_process(_dt):
 	velocity = move_and_slide(velocity)
 
 func _process(_dt):
-	pass
+	update_anims()
 
 func handle_input():
 	velocity = Vector2.ZERO
@@ -59,6 +65,11 @@ func handle_input():
 	if velocity.x != 0 && velocity.y != 0:
 		velocity.x = 0
 		velocity.y = 0
+	
+	if velocity.x != 0 || velocity.y != 0:
+		current_state = state.WALK
+	else:
+		current_state = state.IDLE
 	
 	if !both_axes:
 		# Moving left
@@ -98,3 +109,31 @@ func handle_input():
 	
 	velocity.x *= speed
 	velocity.y *= speed
+
+func set_anim(name, dir):
+	if name == "idle":
+		$AnimationPlayer.play("RESET")
+		$AnimationPlayer.play("walk" + '_' + dir)
+		$AnimationPlayer.stop()
+	else:
+		$AnimationPlayer.play(name + '_' + dir)
+
+func update_anims():
+	var anim_name = ""
+	var dir_name = ""
+	
+	if current_state == state.WALK:
+		anim_name = "walk"
+	elif current_state == state.IDLE:
+		anim_name = "idle"
+	
+	if anim_dir == dir.F:
+		dir_name = "f"
+	elif anim_dir == dir.B:
+		dir_name = "b"
+	elif anim_dir == dir.L:
+		dir_name = "l"
+	elif anim_dir == dir.R:
+		dir_name = "r"
+	
+	set_anim(anim_name, dir_name)

@@ -1,16 +1,19 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/ent/Player.gd" type="Script" id=1]
 [ext_resource path="res://res/img/ent/player/player.png" type="Texture" id=2]
 [ext_resource path="res://addons/node_library/scripts/shaky_camera_2d.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 16 )
+extents = Vector2( 5, 1 )
 
 [sub_resource type="OpenSimplexNoise" id=2]
 seed = -1133940707
 period = 2.0
 persistence = 0.414
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 5, 14.5 )
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -84,7 +87,20 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=7]
 resource_name = "walk_r"
 length = 0.5
+loop = true
 step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 0, 3, 2 ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -96,6 +112,7 @@ vframes = 4
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 14 )
 shape = SubResource( 1 )
 
 [node name="ShakyCamera2D" type="Camera2D" parent="."]
@@ -105,6 +122,12 @@ shake_noise = SubResource( 2 )
 max_shake_offset = 20
 shake_decay = 5
 shake_frequency = 50
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )
