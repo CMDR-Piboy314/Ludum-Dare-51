@@ -75,4 +75,4 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[connection signal="pressed" from="BackBtn" to="BackBtn" method="_on_BackBtn2_pressed"]
+[connection signal="pressed" from="BackBtn" to="BackBtn" method="_on_BackBtn_pressed"]
