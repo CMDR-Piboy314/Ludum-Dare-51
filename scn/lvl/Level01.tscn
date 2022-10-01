@@ -8,6 +8,8 @@
 [ext_resource path="res://scn/ent/enemies/Ghost01.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/lvl/Level01.gd" type="Script" id=7]
 
+[ext_resource path="res://scn/UI/invertedEffect.tscn" type="PackedScene" id=8]
+
 [sub_resource type="Environment" id=44]
 background_mode = 4
 glow_enabled = true
@@ -463,6 +465,7 @@ position = Vector2( 119, 66 )
 [node name="Ghost01" parent="." instance=ExtResource( 6 )]
 position = Vector2( -30, -28 )
 
+
 [node name="Line2D" type="Line2D" parent="."]
 visible = false
 width = 5.0
@@ -473,3 +476,10 @@ visible = false
 navpoly = SubResource( 55 )
 
 [connection signal="path_changed" from="Ghost01" to="." method="_on_Ghost01_path_changed"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.298039, 0.298039, 0.298039, 1 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
+visible = false
+
