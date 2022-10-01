@@ -1,14 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://scn/UI/Buttons/MenuButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/UI/btn/PlayBtn.gd" type="Script" id=2]
-[ext_resource path="res://scn/lvl/Level01.tscn" type="PackedScene" id=3]
 
 [node name="PlayBtn" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
-target_scn = ExtResource( 3 )
 
 [node name="Label" parent="." index="0"]
 text = "PLAY"
-
-[connection signal="pressed" from="." to="." method="_on_PlayBtn_pressed"]
