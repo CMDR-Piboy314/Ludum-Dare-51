@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://res/img/ent/tiles/tiles01.png" type="Texture" id=1]
 [ext_resource path="res://scn/ent/Player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://res/img/light.png" type="Texture" id=5]
 [ext_resource path="res://scn/ent/enemies/Ghost01.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/lvl/Level01.gd" type="Script" id=7]
-
 [ext_resource path="res://scn/UI/invertedEffect.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Environment" id=44]
@@ -434,6 +433,8 @@ outlines = [ PoolVector2Array( 105, 143, 105, 32, 96, 31, 96, 21, -54, 19, -56, 
 [node name="Level01" type="Node2D"]
 script = ExtResource( 7 )
 
+[node name="CanvasLayer2" parent="." instance=ExtResource( 8 )]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 44 )
 
@@ -465,7 +466,6 @@ position = Vector2( 119, 66 )
 [node name="Ghost01" parent="." instance=ExtResource( 6 )]
 position = Vector2( -30, -28 )
 
-
 [node name="Line2D" type="Line2D" parent="."]
 visible = false
 width = 5.0
@@ -475,11 +475,10 @@ default_color = Color( 0.054902, 1, 0, 1 )
 visible = false
 navpoly = SubResource( 55 )
 
-[connection signal="path_changed" from="Ghost01" to="." method="_on_Ghost01_path_changed"]
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
 visible = false
 
+[connection signal="path_changed" from="Ghost01" to="." method="_on_Ghost01_path_changed"]

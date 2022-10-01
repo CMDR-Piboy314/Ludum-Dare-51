@@ -7,7 +7,6 @@ func _process(_dt):
 		self.visible = true
 	else:
 		self.visible = false
-
 #self.visible = false
 
 #hide()
