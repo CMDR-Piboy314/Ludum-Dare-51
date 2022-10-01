@@ -18,6 +18,10 @@ config/icon="res://icon.png"
 
 globals="*res://src/globals.gd"
 
+[debug]
+
+settings/fps/force_fps=60
+
 [display]
 
 window/size/width=240
