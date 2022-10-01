@@ -6,7 +6,7 @@
 [ext_resource path="res://res/img/light.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 1 )
+extents = Vector2( 5, 5 )
 
 [sub_resource type="OpenSimplexNoise" id=2]
 seed = -1133940707
