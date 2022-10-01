@@ -13,3 +13,5 @@ hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]

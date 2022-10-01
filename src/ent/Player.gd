@@ -1,10 +1,13 @@
 extends KinematicBody2D
 
 export(int) var max_speed = 100
-
-var velocity = Vector2.ZERO
+export(int) var max_health = 50
+export(int) var hit_damage = 10
 
 var speed = max_speed
+var health = max_health
+
+var velocity = Vector2.ZERO
 
 var both_axes
 
