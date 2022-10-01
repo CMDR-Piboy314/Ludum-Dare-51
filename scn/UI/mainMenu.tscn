@@ -195,6 +195,7 @@ hframes = 6
 vframes = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pumpkin"]
+autoplay = "default"
 anims/RESET = SubResource( 9 )
 anims/default = SubResource( 10 )
 
