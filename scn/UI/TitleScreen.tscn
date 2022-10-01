@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scn/UI/Buttons/QuitBtn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scn/UI/Buttons/NewGameBtn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scn/UI/Buttons/SettingsBtn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://res/fnt/ludum/ludum.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 4 )
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -97.5
+margin_top = -51.5
+margin_right = 97.5
+margin_bottom = 51.5
+
+[node name="Logo" type="TextureRect" parent="Menu"]
+margin_right = 195.0
+stretch_mode = 4
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+margin_top = 4.0
+margin_right = 195.0
+margin_bottom = 103.0
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
+margin_right = 119.0
+margin_bottom = 99.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="NewGameBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
+margin_top = 15.0
+margin_right = 119.0
+margin_bottom = 35.0
+
+[node name="SettingsBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
+margin_top = 39.0
+margin_right = 119.0
+margin_bottom = 59.0
+
+[node name="QuitBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 1 )]
+margin_top = 63.0
+margin_right = 119.0
+margin_bottom = 83.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
+margin_left = 123.0
+margin_right = 195.0
+margin_bottom = 99.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="TextureRect" type="TextureRect" parent="Menu/CenterRow/CenterContainer"]
+margin_left = 36.0
+margin_top = 49.0
+margin_right = 36.0
+margin_bottom = 49.0
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -195.0
+margin_top = -9.0
+size_flags_vertical = 9
+custom_fonts/font = SubResource( 1 )
+text = "Version: 0.0.0"
+align = 2
+valign = 2
+uppercase = true
