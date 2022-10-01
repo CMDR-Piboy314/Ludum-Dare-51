@@ -27,47 +27,62 @@ margin_bottom = 51.5
 margin_right = 195.0
 stretch_mode = 4
 
-[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+[node name="Temp" type="Label" parent="Menu"]
+margin_left = 39.0
 margin_top = 4.0
+margin_right = 155.0
+margin_bottom = 13.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 1 )
+text = "Game Name here"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_editor_description_": "This will be replaced by the logo"
+}
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+margin_top = 17.0
 margin_right = 195.0
 margin_bottom = 103.0
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
 margin_right = 119.0
-margin_bottom = 99.0
+margin_bottom = 86.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="NewGameBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
-margin_top = 15.0
+margin_top = 9.0
 margin_right = 119.0
-margin_bottom = 35.0
+margin_bottom = 29.0
 
 [node name="SettingsBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
-margin_top = 39.0
+margin_top = 33.0
 margin_right = 119.0
-margin_bottom = 59.0
+margin_bottom = 53.0
 
 [node name="QuitBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 1 )]
-margin_top = 63.0
+margin_top = 57.0
 margin_right = 119.0
-margin_bottom = 83.0
+margin_bottom = 77.0
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
 margin_left = 123.0
 margin_right = 195.0
-margin_bottom = 99.0
+margin_bottom = 86.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.6
 
 [node name="TextureRect" type="TextureRect" parent="Menu/CenterRow/CenterContainer"]
 margin_left = 36.0
-margin_top = 49.0
+margin_top = 43.0
 margin_right = 36.0
-margin_bottom = 49.0
+margin_bottom = 43.0
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 1.0
