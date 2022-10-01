@@ -1,9 +1,37 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scn/UI/Buttons/QuitBtn.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scn/UI/Buttons/NewGameBtn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scn/UI/Buttons/PlayBtn.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scn/UI/Buttons/SettingsBtn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://res/fnt/ludum/ludum.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.262745, 0.184314, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.168627, 0.372549, 0.721569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.14902, 0.341176, 0.67451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0.211765, 0.580392, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.0235294, 0, 0.380392, 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+Button/fonts/font = SubResource( 2 )
+Button/styles/disabled = SubResource( 4 )
+Button/styles/focus = SubResource( 5 )
+Button/styles/hover = SubResource( 6 )
+Button/styles/normal = SubResource( 7 )
+Button/styles/pressed = SubResource( 8 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 8
@@ -12,6 +40,11 @@ font_data = ExtResource( 4 )
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0784314, 0, 0.113725, 1 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -38,22 +71,23 @@ margin_right = 119.0
 margin_bottom = 99.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource( 3 )
 alignment = 1
 
-[node name="NewGameBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
-margin_top = 15.0
+[node name="PlayBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
+margin_top = 24.0
 margin_right = 119.0
-margin_bottom = 35.0
+margin_bottom = 38.0
 
 [node name="SettingsBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
-margin_top = 39.0
+margin_top = 42.0
 margin_right = 119.0
-margin_bottom = 59.0
+margin_bottom = 56.0
 
 [node name="QuitBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 1 )]
-margin_top = 63.0
+margin_top = 60.0
 margin_right = 119.0
-margin_bottom = 83.0
+margin_bottom = 74.0
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
 margin_left = 123.0
