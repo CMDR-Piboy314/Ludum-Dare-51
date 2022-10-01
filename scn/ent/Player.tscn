@@ -6,7 +6,7 @@
 [ext_resource path="res://res/img/light.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 5 )
+extents = Vector2( 5, 1 )
 
 [sub_resource type="OpenSimplexNoise" id=2]
 seed = -1133940707
@@ -138,6 +138,7 @@ anims/walk_l = SubResource( 6 )
 anims/walk_r = SubResource( 7 )
 
 [node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 0, 14 )
 texture = ExtResource( 4 )
 texture_scale = 4.0
 shadow_enabled = true
