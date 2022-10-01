@@ -5,7 +5,7 @@
 [ext_resource path="res://addons/node_library/scripts/shaky_camera_2d.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 1 )
+extents = Vector2( 5, 5 )
 
 [sub_resource type="OpenSimplexNoise" id=2]
 seed = -1133940707
