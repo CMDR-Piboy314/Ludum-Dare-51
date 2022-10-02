@@ -1,5 +1,7 @@
 extends Node
 
+var isPaused = false
+
 var eventNeeded = false
 
 var timerActive = false

@@ -3,7 +3,7 @@ extends Label
 var timer = 0
 
 func _process(delta):
-	if globals.timerActive:
+	if globals.timerActive and !globals.isPaused:
 		timer += delta
 		var displayTime = "%02d : %02d : %02d" % [fmod(timer, 60 * 60) / 60, fmod(timer, 60), fmod(timer, 1) * 1000]
 		text = displayTime

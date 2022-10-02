@@ -31,6 +31,11 @@ func _ready():
 	globals.playerHealth = max_health
 
 func _physics_process(_dt):
+	if globals.isPaused:
+		speed = 0
+	else:
+		speed = max_speed
+
 	handle_input()
 	
 	velocity = move_and_slide(velocity)

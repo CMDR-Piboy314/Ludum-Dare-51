@@ -3,7 +3,7 @@ extends Label
 var countdown = 10
 
 func _process(delta):
-	if globals.timerActive:
+	if globals.timerActive and !globals.isPaused:
 		countdown -= delta
 		
 		if (countdown <= 1):
