@@ -129,8 +129,10 @@ func _on_Hitbox_area_entered(area):
 		if health < 1:
 			globals.playerHealth -= (damage * 3)
 			damage = 0
+			
 			$CollisionShape2D.set_deferred("disabled", true)
 			$Sprite.modulate = dead_colour
+		
 		else:
 			$CollisionShape2D.set_deferred("disabled", false)
 		
