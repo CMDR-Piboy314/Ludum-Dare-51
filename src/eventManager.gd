@@ -8,24 +8,16 @@ func _process(_delta):
 		if random == 0:
 			globals.invertCamera = !globals.invertCamera
 			globals.invertControls = false
-			
-			#TMP
-			SpawnPoints.enemyType = globals.enemyTypes.GHOST
-			SpawnPoints.spawn = true
+
 		if random == 1:
 			globals.invertControls = !globals.invertControls
 			globals.invertCamera = false
-			
-			#TMP
-			SpawnPoints.enemyType = globals.enemyTypes.GHOST
-			SpawnPoints.spawn = true
+
 		if random == 2:
-			SpawnPoints.enemyType = globals.enemyTypes.GHOST
-			SpawnPoints.spawn = true
-			
+			globals.spawnPoint_enemyType = globals.enemyTypes.GHOST
+			globals.spawnPoint_spawn = true
+		
 		globals.eventNeeded = false
-		pass
-	pass
 
 # Declare member variables here. Examples:
 # var a = 2
