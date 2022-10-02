@@ -5,19 +5,19 @@ func _process(_delta):
 		self.texture = preload("res://res/img/nothing.png")
 		
 	if globals.playerInventory == globals.inventoryItems.KEY_YELLOW:
-		self.texture = preload("res://icon.png")
+		self.texture = preload("res://res/img/UI/keyYellow.png")
 		
 	if globals.playerInventory == globals.inventoryItems.KEY_RED:
-		self.texture = preload("res://icon.png")
+		self.texture = preload("res://res/img/UI/keyRed.png")
 		
 	if globals.playerInventory == globals.inventoryItems.KEY_PURPLE:
-		self.texture = preload("res://icon.png")
+		self.texture = preload("res://res/img/UI/keyBlue.png")
 		
 	if globals.playerInventory == globals.inventoryItems.KEY_GREEN:
-		self.texture = preload("res://icon.png")
+		self.texture = preload("res://res/img/UI/keyGreen.png")
 		
 	if globals.playerInventory == globals.inventoryItems.KEY_ORANGE:
-		self.texture = preload("res://icon.png")
+		self.texture = preload("res://res/img/UI/keyOrange.png")
 
 
 # Declare member variables here. Examples:
