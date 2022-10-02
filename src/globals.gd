@@ -22,3 +22,8 @@ enum inventoryItems {
 }
 
 var playerInventory = inventoryItems.NONE
+
+enum enemyTypes {
+	GHOST,
+	ZOMBIE
+}
