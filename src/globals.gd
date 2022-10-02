@@ -1,5 +1,9 @@
 extends Node
 
+var eventNeeded = false
+
+var timerActive = false
+
 var invertControls = false
 
 var invertCamera = false

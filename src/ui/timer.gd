@@ -1,11 +1,12 @@
 extends Label
 
-var timer = 10
+var timer = 0
 
 func _process(delta):
-	timer += delta
-	var displayTime = "%02d : %02d : %02d" % [fmod(timer, 60 * 60) / 60, fmod(timer, 60), fmod(timer, 1) * 1000]
-	text = displayTime
+	if globals.timerActive:
+		timer += delta
+		var displayTime = "%02d : %02d : %02d" % [fmod(timer, 60 * 60) / 60, fmod(timer, 60), fmod(timer, 1) * 1000]
+		text = displayTime
 
 
 

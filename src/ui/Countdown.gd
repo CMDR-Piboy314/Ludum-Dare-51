@@ -3,13 +3,15 @@ extends Label
 var countdown = 10
 
 func _process(delta):
-	countdown -= delta
-	
-	if (countdown <= 1):
-		countdown = 10 + countdown
-	
-	var displayTime = "%02d" % [fmod(countdown, 60)]
-	text = "Next event: " + displayTime
+	if globals.timerActive:
+		countdown -= delta
+		
+		if (countdown <= 1):
+			globals.eventNeeded = true
+			countdown = 10 + countdown
+		
+		var displayTime = "%02d" % [fmod(countdown, 60)]
+		text = "Next event: " + displayTime
 
 
 
