@@ -27,3 +27,6 @@ enum enemyTypes {
 	GHOST,
 	ZOMBIE
 }
+
+var spawnPoint_enemyType = enemyTypes.GHOST
+var spawnPoint_spawn = false

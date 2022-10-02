@@ -4,13 +4,10 @@ export(PackedScene) var ghost_scene
 
 var rand = RandomNumberGenerator.new()
 
-var spawn = false
-var enemyType = globals.enemyTypes.GHOST
-
 func spawn(enemyType):
 	rand.randomize()
 	
-	var point = rand.randi_range(1, get_child_count())
+	var point = rand.randi_range(0, (get_child_count() - 1))
 	var spawn_pos = get_child(point).global_position
 	
 	match enemyType:
@@ -22,7 +19,7 @@ func spawn(enemyType):
 			get_node("%YSort").add_child(ghost_inst)
 
 func _process(_dt):
-	if spawn == true:
-		spawn(enemyType)
+	if globals.spawnPoint_spawn == true:
+		spawn(globals.spawnPoint_enemyType)
 		
-		spawn = false
+		globals.spawnPoint_spawn = false

@@ -28,6 +28,7 @@ enum state {
 var current_state = state.IDLE
 
 func _ready():
+	globals.spawnPoint_spawn = true
 	globals.playerHealth = max_health
 
 func _physics_process(_dt):
