@@ -432,10 +432,7 @@ outlines = [ PoolVector2Array( 105, 143, 105, 32, 96, 31, 96, 21, -54, 19, -56, 
 [node name="Level01" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="UI" parent="." instance=ExtResource( 3 )]
-
 [node name="CanvasLayer2" parent="." instance=ExtResource( 8 )]
-visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 44 )
@@ -484,6 +481,8 @@ color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
 visible = false
+
+[node name="UI" parent="." instance=ExtResource( 3 )]
 
 [connection signal="path_changed" from="Ghost01" to="." method="_on_Ghost01_path_changed"]
 [connection signal="path_changed" from="Ghost02" to="." method="_on_Ghost01_path_changed"]

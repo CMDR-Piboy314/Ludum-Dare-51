@@ -48,7 +48,6 @@ margin_left = 29.0
 margin_top = 4.0
 margin_right = 86.0
 margin_bottom = 17.0
-value = 75.0
 texture_progress = ExtResource( 4 )
 nine_patch_stretch = true
 script = ExtResource( 5 )
