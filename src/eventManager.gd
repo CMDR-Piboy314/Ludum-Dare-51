@@ -4,14 +4,25 @@ func _process(_delta):
 	if globals.eventNeeded:
 		randomize()
 		var random = randi() % 3
+		
 		if random == 0:
 			globals.invertCamera = !globals.invertCamera
 			globals.invertControls = false
+			
+			#TMP
+			SpawnPoints.enemyType = globals.enemyTypes.GHOST
+			SpawnPoints.spawn = true
 		if random == 1:
 			globals.invertControls = !globals.invertControls
 			globals.invertCamera = false
+			
+			#TMP
+			SpawnPoints.enemyType = globals.enemyTypes.GHOST
+			SpawnPoints.spawn = true
 		if random == 2:
-			pass
+			SpawnPoints.enemyType = globals.enemyTypes.GHOST
+			SpawnPoints.spawn = true
+			
 		globals.eventNeeded = false
 		pass
 	pass
