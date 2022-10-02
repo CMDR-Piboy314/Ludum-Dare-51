@@ -17,8 +17,32 @@ enum colours {
 export(colours) var colour = colours.YELLOW
 
 func _input(_event):
-	if Input.is_action_pressed("shoot"):
-		opened = true
+	if check_input == true:
+		if Input.is_action_pressed("shoot"):
+			match colour:
+				colours.YELLOW:
+					if globals.playerInventory != globals.inventoryItems.KEY_YELLOW:
+						pass
+				
+				colours.RED:
+					if globals.playerInventory != globals.inventoryItems.KEY_RED:
+						pass
+				
+				colours.PURPLE:
+					if globals.playerInventory != globals.inventoryItems.KEY_PURPLE:
+						pass
+				
+				colours.GREEN:
+					if globals.playerInventory != globals.inventoryItems.KEY_GREEN:
+						pass
+				
+				colours.ORANGE:
+					if globals.playerInventory != globals.inventoryItems.KEY_ORANGE:
+						pass
+			
+			opened = true
+			
+			globals.playerInventory = globals.inventoryItems.NONE
 
 func _process(_dt):
 	if Engine.editor_hint:
