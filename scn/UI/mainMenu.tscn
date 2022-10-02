@@ -7,7 +7,7 @@
 [ext_resource path="res://res/img/ent/tiles/tiles01.png" type="Texture" id=5]
 [ext_resource path="res://src/ui/Buttons.gd" type="Script" id=6]
 [ext_resource path="res://scn/lvl/Level01.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scn/UI/settingsMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scn/UI/creditsMenu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://res/img/pumpkin.png" type="Texture" id=9]
 [ext_resource path="res://src/ui/Pumpkin.gd" type="Script" id=10]
 
@@ -152,7 +152,7 @@ margin_top = 18.0
 margin_right = 118.0
 margin_bottom = 32.0
 
-[node name="SettingsBtn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
+[node name="Credits" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
 margin_top = 36.0
 margin_right = 118.0
 margin_bottom = 50.0
@@ -218,6 +218,6 @@ anims/default = SubResource( 10 )
 "anims/default 2" = SubResource( 11 )
 
 [connection signal="pressed" from="Menu/CenterRow/Buttons/PlayBtn" to="Menu/CenterRow/Buttons" method="_on_PlayBtn_pressed"]
-[connection signal="pressed" from="Menu/CenterRow/Buttons/SettingsBtn" to="Menu/CenterRow/Buttons" method="_on_SettingsBtn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons/Credits" to="Menu/CenterRow/Buttons" method="_on_SettingsBtn_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/Buttons/QuitBtn" to="Menu/CenterRow/Buttons" method="_on_QuitBtn_pressed"]
 [connection signal="animation_finished" from="Pumpkin/AnimationPlayer" to="Pumpkin" method="_on_AnimationPlayer_animation_finished"]

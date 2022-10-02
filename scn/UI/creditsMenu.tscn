@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/ui/BackBtn.gd" type="Script" id=2]
 [ext_resource path="res://theme01.tres" type="Theme" id=3]
@@ -9,7 +9,11 @@
 size = 8
 font_data = ExtResource( 5 )
 
-[node name="Settings" type="Control"]
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 5 )
+
+[node name="Credits" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -40,12 +44,12 @@ margin_right = 97.0
 margin_bottom = 43.0
 
 [node name="Title" type="Label" parent="Menu"]
-margin_left = 61.0
-margin_right = 133.0
+margin_left = 65.0
+margin_right = 128.0
 margin_bottom = 9.0
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 1 )
-text = "Settings"
+text = "Credits"
 align = 1
 valign = 1
 uppercase = true
@@ -53,26 +57,13 @@ __meta__ = {
 "_editor_description_": "This will be replaced by the logo"
 }
 
-[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+[node name="Label" type="Label" parent="Menu"]
 margin_top = 13.0
 margin_right = 194.0
 margin_bottom = 94.0
-size_flags_vertical = 3
-theme = ExtResource( 3 )
-
-[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
-margin_right = 95.0
-margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 1
-
-[node name="Buttons2" type="VBoxContainer" parent="Menu/CenterRow"]
-margin_left = 99.0
-margin_right = 194.0
-margin_bottom = 81.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
+custom_fonts/font = SubResource( 2 )
+text = "TODO: CREDITS"
 
 [connection signal="pressed" from="BackBtn" to="BackBtn" method="_on_BackBtn_pressed"]
