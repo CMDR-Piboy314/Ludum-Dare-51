@@ -13,15 +13,16 @@ var invertCamera = false
 var playerHealth = 100
 
 enum inventoryItems {
+	NONE,
 	KEY_YELLOW,
 	KEY_RED,
 	KEY_PURPLE,
 	KEY_GREEN,
 	KEY_ORANGE,
-	NONE
+	PISTOL
 }
 
-var playerInventory = inventoryItems.NONE
+var playerInventory = inventoryItems.PISTOL
 
 enum enemyTypes {
 	GHOST,

@@ -131,7 +131,7 @@ shape = SubResource( 7 )
 texture = ExtResource( 3 )
 energy = 0.5
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." groups=["Enemies"]]
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
