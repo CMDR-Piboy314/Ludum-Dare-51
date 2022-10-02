@@ -10,7 +10,7 @@ var enemyType = globals.enemyTypes.GHOST
 func spawn(enemyType):
 	rand.randomize()
 	
-	var point = rand.randi_range(0, (get_child_count() - 1))
+	var point = rand.randi_range(1, get_child_count())
 	var spawn_pos = get_child(point).global_position
 	
 	match enemyType:
