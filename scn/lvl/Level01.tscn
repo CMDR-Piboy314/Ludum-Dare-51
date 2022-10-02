@@ -461,6 +461,15 @@ position = Vector2( 119, 66 )
 [node name="Ghost01" parent="." instance=ExtResource( 6 )]
 position = Vector2( -30, -28 )
 
+[node name="Ghost02" parent="." instance=ExtResource( 6 )]
+position = Vector2( 116, -7 )
+
+[node name="Ghost03" parent="." instance=ExtResource( 6 )]
+position = Vector2( 212, 53 )
+
+[node name="Ghost04" parent="." instance=ExtResource( 6 )]
+position = Vector2( 65, -26 )
+
 [node name="Line2D" type="Line2D" parent="."]
 visible = false
 width = 5.0
@@ -477,3 +486,6 @@ color = Color( 0.298039, 0.298039, 0.298039, 1 )
 visible = false
 
 [connection signal="path_changed" from="Ghost01" to="." method="_on_Ghost01_path_changed"]
+[connection signal="path_changed" from="Ghost02" to="." method="_on_Ghost01_path_changed"]
+[connection signal="path_changed" from="Ghost03" to="." method="_on_Ghost01_path_changed"]
+[connection signal="path_changed" from="Ghost04" to="." method="_on_Ghost01_path_changed"]

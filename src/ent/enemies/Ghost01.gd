@@ -134,4 +134,4 @@ func _on_Hitbox_area_entered(area):
 		else:
 			$CollisionShape2D.set_deferred("disabled", false)
 		
-		target.health -= (damage)
+		globals.playerHealth -= (damage)
