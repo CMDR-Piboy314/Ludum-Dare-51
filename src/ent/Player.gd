@@ -5,7 +5,6 @@ export(int) var max_health = 50
 export(int) var hit_damage = 10
 
 var speed = max_speed
-var health = max_health
 
 var velocity = Vector2.ZERO
 
@@ -29,7 +28,7 @@ enum state {
 var current_state = state.IDLE
 
 func _ready():
-	pass
+	globals.playerHealth = max_health
 
 func _physics_process(_dt):
 	handle_input()

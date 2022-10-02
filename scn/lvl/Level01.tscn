@@ -444,7 +444,7 @@ environment = SubResource( 44 )
 visible = false
 color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="WallsNFloor" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
