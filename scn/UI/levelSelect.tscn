@@ -1,0 +1,176 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://scn/UI/Buttons/BackBtn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/ui/BackBtn.gd" type="Script" id=2]
+[ext_resource path="res://theme01.tres" type="Theme" id=3]
+[ext_resource path="res://res/fnt/ludum/ludum.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://res/img/ent/tiles/tiles01.png" type="Texture" id=5]
+[ext_resource path="res://scn/UI/Buttons/lvl2btn.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scn/UI/Buttons/lvl1btn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scn/UI/Buttons/lvl3btn.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scn/UI/Buttons/lvl4btn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scn/UI/Buttons/lvl5btn.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scn/UI/Buttons/lvl6btn.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scn/UI/Buttons/lvl7btn.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scn/UI/Buttons/lvl8btn.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scn/UI/Buttons/lvl9btn.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scn/UI/Buttons/lvl10btn.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/ui/lvlButtons.gd" type="Script" id=16]
+
+[sub_resource type="DynamicFont" id=9]
+size = 8
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.262745, 0.184314, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.168627, 0.372549, 0.721569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.14902, 0.341176, 0.67451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0.211765, 0.580392, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.0235294, 0, 0.380392, 1 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 2 )
+Button/fonts/font = SubResource( 2 )
+Button/styles/disabled = SubResource( 4 )
+Button/styles/focus = SubResource( 5 )
+Button/styles/hover = SubResource( 6 )
+Button/styles/normal = SubResource( 7 )
+Button/styles/pressed = SubResource( 8 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -88, 0 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -97.0
+margin_top = -51.5
+margin_right = 97.5
+margin_bottom = 51.5
+
+[node name="Title" type="Label" parent="Menu"]
+margin_left = 45.0
+margin_right = 148.0
+margin_bottom = 9.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 9 )
+text = "Select Level"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_editor_description_": "This will be replaced by the logo"
+}
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+margin_top = 13.0
+margin_right = 194.0
+margin_bottom = 99.0
+size_flags_vertical = 3
+script = ExtResource( 16 )
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
+margin_right = 95.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 10 )
+alignment = 1
+
+[node name="lvl1Btn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 7 )]
+margin_right = 95.0
+margin_bottom = 14.0
+
+[node name="lvl2Btn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 6 )]
+margin_top = 18.0
+margin_right = 95.0
+margin_bottom = 32.0
+
+[node name="lvl3Btn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 8 )]
+margin_top = 36.0
+margin_right = 95.0
+margin_bottom = 50.0
+
+[node name="lvl4Btn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 9 )]
+margin_top = 54.0
+margin_right = 95.0
+margin_bottom = 68.0
+
+[node name="lvl5Btn" parent="Menu/CenterRow/Buttons" instance=ExtResource( 10 )]
+margin_top = 72.0
+margin_right = 95.0
+margin_bottom = 86.0
+
+[node name="Buttons2" type="VBoxContainer" parent="Menu/CenterRow"]
+margin_left = 99.0
+margin_right = 194.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 10 )
+alignment = 1
+
+[node name="lvl6Btn" parent="Menu/CenterRow/Buttons2" instance=ExtResource( 11 )]
+margin_right = 95.0
+margin_bottom = 14.0
+
+[node name="lvl7Btn" parent="Menu/CenterRow/Buttons2" instance=ExtResource( 12 )]
+margin_top = 18.0
+margin_right = 95.0
+margin_bottom = 32.0
+
+[node name="lvl8Btn" parent="Menu/CenterRow/Buttons2" instance=ExtResource( 13 )]
+margin_top = 36.0
+margin_right = 95.0
+margin_bottom = 50.0
+
+[node name="lvl9Btn" parent="Menu/CenterRow/Buttons2" instance=ExtResource( 14 )]
+margin_top = 54.0
+margin_right = 95.0
+margin_bottom = 68.0
+
+[node name="lvl10Btn" parent="Menu/CenterRow/Buttons2" instance=ExtResource( 15 )]
+margin_top = 72.0
+margin_right = 95.0
+margin_bottom = 86.0
+
+[node name="BackBtn" parent="Menu" instance=ExtResource( 1 )]
+margin_top = 103.0
+margin_right = 194.0
+margin_bottom = 117.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="Menu/CenterRow/Buttons/lvl1Btn" to="Menu/CenterRow" method="_on_lvl1Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons/lvl2Btn" to="Menu/CenterRow" method="_on_lvl2Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons/lvl3Btn" to="Menu/CenterRow" method="_on_lvl3Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons/lvl4Btn" to="Menu/CenterRow" method="_on_lvl4Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons/lvl5Btn" to="Menu/CenterRow" method="_on_lvl5Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons2/lvl6Btn" to="Menu/CenterRow" method="_on_lvl6Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons2/lvl7Btn" to="Menu/CenterRow" method="_on_lvl7Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons2/lvl8Btn" to="Menu/CenterRow" method="_on_lvl8Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons2/lvl9Btn" to="Menu/CenterRow" method="_on_lvl9Btn_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/Buttons2/lvl10Btn" to="Menu/CenterRow" method="_on_lvl10Btn_pressed"]
+[connection signal="pressed" from="Menu/BackBtn" to="Menu/BackBtn" method="_on_BackBtn_pressed"]
