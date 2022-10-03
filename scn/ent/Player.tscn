@@ -196,6 +196,26 @@ shake_frequency = 50
 position = Vector2( 0, -0.5 )
 shape = SubResource( 8 )
 
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 0, 14 )
+texture = ExtResource( 4 )
+texture_scale = 4.0
+shadow_enabled = true
+
+[node name="BulletPositions" type="Node2D" parent="."]
+
+[node name="l" type="Position2D" parent="BulletPositions"]
+position = Vector2( -11, -5 )
+
+[node name="r" type="Position2D" parent="BulletPositions"]
+position = Vector2( 11, -5 )
+
+[node name="f" type="Position2D" parent="BulletPositions"]
+position = Vector2( 5, -3 )
+
+[node name="b" type="Position2D" parent="BulletPositions"]
+position = Vector2( 5, -8 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )
 anims/shoot_b = SubResource( 10 )
@@ -206,11 +226,5 @@ anims/walk_b = SubResource( 5 )
 anims/walk_f = SubResource( 4 )
 anims/walk_l = SubResource( 6 )
 anims/walk_r = SubResource( 7 )
-
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 0, 14 )
-texture = ExtResource( 4 )
-texture_scale = 4.0
-shadow_enabled = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

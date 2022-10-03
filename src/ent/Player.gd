@@ -3,7 +3,7 @@ extends KinematicBody2D
 export(PackedScene) var bullet_scene
 
 export(int) var max_speed = 100
-export(int) var max_health = 50
+export(int) var max_health = 100
 export(int) var hit_damage = 10
 
 var speed = max_speed
@@ -182,7 +182,14 @@ func shoot():
 	
 	var bullet_inst = bullet_scene.instance()
 	
-	bullet_inst.global_position = global_position
+	if current_dir == dir.L:
+		bullet_inst.global_position = $BulletPositions/l.global_position
+	elif current_dir == dir.R:
+		bullet_inst.global_position = $BulletPositions/r.global_position
+	elif current_dir == dir.F:
+		bullet_inst.global_position = $BulletPositions/f.global_position
+	elif current_dir == dir.B:
+		bullet_inst.global_position = $BulletPositions/b.global_position
 	
 	if current_dir == dir.L:
 		bullet_inst.global_rotation_degrees = 180

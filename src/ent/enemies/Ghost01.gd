@@ -109,8 +109,9 @@ func _on_DangerZone_body_entered(body):
 		target = body
 
 func _on_DangerZone_body_exited(body):
-	if body.is_in_group("Player"):
-		target = null
+	if health > 0:
+		if body.is_in_group("Player"):
+			target = null
 
 
 func _on_NavigationAgent2D_path_changed():
@@ -131,9 +132,11 @@ func _on_Hitbox_area_entered(area):
 			damage = 0
 			
 			$CollisionShape2D.set_deferred("disabled", true)
+			$Hitbox/CollisionShape2D.set_deferred("disabled", true)
 			$Sprite.modulate = dead_colour
 		
 		else:
 			$CollisionShape2D.set_deferred("disabled", false)
+			$Hitbox/CollisionShape2D.set_deferred("disabled", true)
 		
 		globals.playerHealth -= (damage)

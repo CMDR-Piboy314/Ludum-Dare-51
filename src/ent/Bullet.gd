@@ -1,7 +1,7 @@
 extends Area2D
 
 export(int) var damage = 10
-export(int) var speed = 10
+export(int) var speed = 200
 
 func _physics_process(dt):
 	if rotation_degrees == 0:
@@ -18,3 +18,9 @@ func _on_Bullet_area_entered(area):
 		area.get_parent().health -= damage
 		
 		call_deferred("queue_free")
+
+func _on_Bullet_body_entered(body):
+	if body.is_in_group("Player"):
+		return
+	
+	call_deferred("queue_free")
