@@ -627,6 +627,7 @@ position = Vector2( 119, 66 )
 position = Vector2( 119, -123 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+visible = false
 navpoly = SubResource( 53 )
 
 [node name="Dark" type="CanvasModulate" parent="."]
