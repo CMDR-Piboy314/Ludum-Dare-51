@@ -29,7 +29,7 @@ enum inventoryItems {
 var key_scn = preload("res://scn/ent/Key.tscn")
 var pistol_scn = preload("res://scn/ent/Pistol.tscn")
 
-var playerInventory = inventoryItems.PISTOL
+var playerInventory
 var lastPlayerInventory
 
 enum enemyTypes {
