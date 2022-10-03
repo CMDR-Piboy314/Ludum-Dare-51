@@ -1,17 +1,17 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://src/ent/enemies/Ghost01.gd" type="Script" id=1]
+[ext_resource path="res://src/ent/enemies/Zombie.gd" type="Script" id=1]
 [ext_resource path="res://res/img/light.png" type="Texture" id=2]
 [ext_resource path="res://res/img/ent/enemies/Zombie.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 5, 9 )
+extents = Vector2( 5, 3 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 256, 256 )
+extents = Vector2( 170, 170 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 6, 8.5 )
+extents = Vector2( 6, 16 )
 
 [sub_resource type="Animation" id=9]
 length = 0.001
@@ -167,7 +167,7 @@ tracks/0/keys = {
 [node name="Zombie" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource( 1 )
-dead_colour = Color( 0.568627, 0.560784, 0.564706, 1 )
+dead_modulate = Color( 0.988235, 0.576471, 0.576471, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
@@ -176,8 +176,7 @@ vframes = 12
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0, 1 )
+position = Vector2( 0, 15 )
 shape = SubResource( 6 )
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -194,10 +193,8 @@ texture = ExtResource( 2 )
 energy = 0.5
 
 [node name="Hitbox" type="Area2D" parent="." groups=["Enemies"]]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( 0, -0.5 )
 shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -216,3 +213,4 @@ anims/walk_r = SubResource( 13 )
 [connection signal="body_entered" from="DangerZone" to="." method="_on_DangerZone_body_entered"]
 [connection signal="body_exited" from="DangerZone" to="." method="_on_DangerZone_body_exited"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

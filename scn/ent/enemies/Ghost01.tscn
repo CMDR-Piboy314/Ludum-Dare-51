@@ -88,13 +88,13 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 5, 9 )
+extents = Vector2( 5, 3 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 256, 256 )
+extents = Vector2( 170, 170 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 6, 8.5 )
+extents = Vector2( 6, 16 )
 
 [node name="Ghost01" type="RigidBody2D"]
 gravity_scale = 0.0

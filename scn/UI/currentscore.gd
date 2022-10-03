@@ -8,7 +8,7 @@ extends Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var display = "Your Score: " + globals.currentScore
+	var display = "Your Score: " + str(globals.currentScore)
 	text = display
 
 

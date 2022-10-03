@@ -4,8 +4,8 @@ signal path_changed(path)
 
 export(float) var max_speed = 0.5
 export(int) var max_health = 1
-export(int) var max_damage = 10
-export(Color) var dead_colour
+export(int) var max_damage = 7
+export(Color) var dead_modulate
 
 var speed = max_speed
 var health = max_health
@@ -25,6 +25,7 @@ enum dir {
 }
 
 var current_dir = dir.F
+var dir_name
 
 enum state {
 	IDLE,
@@ -37,20 +38,21 @@ func _ready():
 	pass
 
 func _process(_dt):
+	if target:
+		navigation_agent.set_target_location(target.global_position)
+	
 	if health <= 0:
 		damage = 0
+		speed = 0
 		
 		$CollisionShape2D.set_deferred("disabled", true)
 		$Hitbox/CollisionShape2D.set_deferred("disabled", true)
-		$Sprite.modulate = dead_colour
-	
+		
+		$Sprite.modulate = dead_modulate
+		
+		$AnimationPlayer.play("die_" + dir_name)
 	else:
-		$CollisionShape2D.set_deferred("disabled", false)
-	
-	update_anims()
-	
-	if target:
-		navigation_agent.set_target_location(target.global_position)
+		update_anims()
 
 func _integrate_forces(_state):
 	velocity = position.direction_to(navigation_agent.get_next_location())
@@ -61,8 +63,7 @@ func _integrate_forces(_state):
 	
 	navigation_agent.set_velocity(velocity)
 	
-	if health > 0:
-		rotation_degrees = 0
+	rotation_degrees = 0
 	
 	# Moving left
 	if velocity.x < 0:
@@ -95,7 +96,7 @@ func set_anim(name, dir):
 
 func update_anims():
 	var anim_name = ""
-	var dir_name = ""
+	dir_name = ""
 	
 	if current_state == state.WALK:
 		anim_name = "walk"
@@ -119,8 +120,9 @@ func _on_DangerZone_body_entered(body):
 		target = body
 
 func _on_DangerZone_body_exited(body):
-	if body.is_in_group("Player"):
-		target = null
+	if health > 0:
+		if body.is_in_group("Player"):
+			target = null
 
 
 func _on_NavigationAgent2D_path_changed():
@@ -134,6 +136,9 @@ func _on_NavigationAgent2D_velocity_computed(safe_velocity):
 
 func _on_Hitbox_area_entered(area):
 	if area.is_in_group("Player"):
-		health -= target.hit_damage
-		
-		globals.playerHealth -= (damage)
+		globals.playerHealth -= damage
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if "die" in anim_name:
+		call_deferred("queue_free")
