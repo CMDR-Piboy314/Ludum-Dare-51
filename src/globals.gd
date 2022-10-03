@@ -31,3 +31,6 @@ enum enemyTypes {
 
 var spawnPoint_enemyType = enemyTypes.GHOST
 var spawnPoint_spawn = false
+
+var currentScore = 0
+var highScore = 0

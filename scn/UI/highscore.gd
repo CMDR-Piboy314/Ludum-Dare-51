@@ -1,15 +1,5 @@
 extends Label
 
-var timer = 0
-
-func _process(delta):
-	if globals.timerActive and !globals.isPaused:
-		timer += delta
-		var displayTime = "%02d : %02d : %02d" % [fmod(timer, 60 * 60) / 60, fmod(timer, 60), fmod(timer, 1) * 1000]
-		globals.currentScore = displayTime
-		text = displayTime
-
-
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -18,6 +8,13 @@ func _process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if globals.currentScore > globals.highScore:
+		globals.highScore = globals.currentScore
+		var display = "NEW High Score: " + globals.highScore
+		text = display
+	else:
+		var display = "    High Score: " + globals.highScore
+		text = display
 	pass # Replace with function body.
 
 
