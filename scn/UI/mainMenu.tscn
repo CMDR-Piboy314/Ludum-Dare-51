@@ -219,8 +219,7 @@ margin_right = 214.0
 margin_bottom = 105.0
 rect_scale = Vector2( 0.704415, 0.463235 )
 custom_fonts/font = SubResource( 20 )
-text = "Use
-"
+text = "Use"
 uppercase = true
 
 [node name="Pumpkin" type="Sprite" parent="."]
