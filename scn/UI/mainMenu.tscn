@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scn/UI/Buttons/QuitBtn.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/UI/Buttons/PlayBtn.tscn" type="PackedScene" id=2]
@@ -43,6 +43,13 @@ Button/styles/focus = SubResource( 14 )
 Button/styles/hover = SubResource( 15 )
 Button/styles/normal = SubResource( 16 )
 Button/styles/pressed = SubResource( 17 )
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://res/fnt/ludum/ludum.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+use_mipmaps = true
+font_data = SubResource( 19 )
 
 [sub_resource type="StreamTexture" id=18]
 load_path = "res://.import/pumpkin.png-e885c0000b83620a8fd4a81a7f7df5e4.stex"
@@ -193,6 +200,26 @@ custom_fonts/font = SubResource( 1 )
 text = "Version: 0.0.0"
 align = 2
 valign = 2
+uppercase = true
+
+[node name="Controls label" type="Label" parent="."]
+margin_left = 133.0
+margin_top = 43.0
+margin_right = 210.0
+margin_bottom = 61.0
+rect_scale = Vector2( 0.704415, 0.463235 )
+custom_fonts/font = SubResource( 20 )
+text = "Move"
+uppercase = true
+
+[node name="Controls label2" type="Label" parent="."]
+margin_left = 133.0
+margin_top = 87.0
+margin_right = 214.0
+margin_bottom = 105.0
+rect_scale = Vector2( 0.704415, 0.463235 )
+custom_fonts/font = SubResource( 20 )
+text = "Use"
 uppercase = true
 
 [node name="Pumpkin" type="Sprite" parent="."]
