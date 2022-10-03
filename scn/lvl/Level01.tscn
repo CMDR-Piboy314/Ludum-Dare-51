@@ -462,6 +462,11 @@ position = Vector2( 134, 372 )
 [node name="Key" parent="Keys" instance=ExtResource( 11 )]
 position = Vector2( -4, 185 )
 
+[node name="Boomboxes" type="Node2D" parent="."]
+
+[node name="Boombox" parent="Boomboxes" instance=ExtResource( 13 )]
+position = Vector2( -59, 204 )
+
 [node name="YSort" type="YSort" parent="."]
 unique_name_in_owner = true
 
@@ -510,6 +515,3 @@ position = Vector2( -51, 190 )
 
 [node name="Position2D3" type="Position2D" parent="SpawnPoints"]
 position = Vector2( -30, -196 )
-
-[node name="Boombox" parent="." instance=ExtResource( 13 )]
-position = Vector2( -59, 204 )

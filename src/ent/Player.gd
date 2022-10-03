@@ -35,7 +35,7 @@ var current_state = state.IDLE
 var shooting = false
 
 func _ready():
-	pass
+	$Sprite.frame = 56
 
 func _physics_process(_dt):
 	if globals.isPaused:
