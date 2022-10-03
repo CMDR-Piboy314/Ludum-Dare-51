@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WalkSingle.mp3-598cf100033369cec2a69ec11ccc547a.mp3str"
+
+[deps]
+
+source_file="res://res/sfx/WalkSingle.mp3"
+dest_files=[ "res://.import/WalkSingle.mp3-598cf100033369cec2a69ec11ccc547a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WalkQuad.mp3-cd1480a7e1e9bdce58605a725154e4d7.mp3str"
+
+[deps]
+
+source_file="res://res/sfx/WalkQuad.mp3"
+dest_files=[ "res://.import/WalkQuad.mp3-cd1480a7e1e9bdce58605a725154e4d7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

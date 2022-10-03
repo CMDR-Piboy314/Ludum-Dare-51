@@ -154,12 +154,17 @@ func set_anim(name, dir):
 		$AnimationPlayer.play("RESET")
 		$AnimationPlayer.play("walk" + '_' + dir)
 		$AnimationPlayer.stop()
+		
+		$FootstepSFX.stop()
 		$DustParticles.emitting = false
 		
 	else:
 		if name == "walk":
+			if $FootstepSFX.playing == false:
+				$FootstepSFX.play()
 			$DustParticles.emitting = true
 		else:
+			$FootstepSFX.stop()
 			$DustParticles.emitting = false
 		
 		$AnimationPlayer.play(name + '_' + dir)
@@ -211,7 +216,8 @@ func shoot():
 		bullet_inst.global_rotation_degrees = -90
 	
 	get_tree().get_root().add_child(bullet_inst)
-
+	
+	$ShootSFX.play()
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if "shoot" in anim_name:

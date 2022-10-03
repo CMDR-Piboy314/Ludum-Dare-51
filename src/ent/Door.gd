@@ -44,6 +44,8 @@ func _input(_event):
 			
 			globals.playerInventory = globals.inventoryItems.NONE
 			globals.itemWasUsed = true
+			
+			$AudioStreamPlayer2D.playing = true
 
 func _process(_dt):
 	if Engine.editor_hint:

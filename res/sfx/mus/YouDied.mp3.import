@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/YouDied.mp3-8a1ab56d14b0a67522d187443651bda1.mp3str"
+
+[deps]
+
+source_file="res://res/sfx/mus/YouDied.mp3"
+dest_files=[ "res://.import/YouDied.mp3-8a1ab56d14b0a67522d187443651bda1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
