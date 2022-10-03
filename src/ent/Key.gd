@@ -29,7 +29,10 @@ func _input(_event):
 				colours.ORANGE:
 					globals.playerInventory = globals.inventoryItems.KEY_ORANGE
 			
-			call_deferred("queue_free")
+			$CollisionShape2D.disabled = true
+			$Sprite.visible = false
+			
+			$CollectSFX.play()
 
 func _process(_dt):
 	if Engine.editor_hint:
@@ -44,6 +47,10 @@ func _process(_dt):
 				$Sprite.frame = 4
 			colours.ORANGE:
 				$Sprite.frame = 5
+	
+	else:
+		if $Sprite.visible == false && $CollectSFX.playing == false:
+			call_deferred("queue_free")
 
 func _on_Key_area_entered(body):
 	if body.is_in_group("Player"):
