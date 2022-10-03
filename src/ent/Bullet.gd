@@ -5,15 +5,13 @@ export(int) var speed = 10
 
 func _physics_process(dt):
 	if rotation_degrees == 0:
-		position.x += speed
+		position.x += speed * dt
 	elif rotation_degrees == 180:
-		position.x -= speed
+		position.x -= speed * dt
 	elif rotation_degrees == 90:
-		position.y += speed
+		position.y += speed * dt
 	elif rotation_degrees == -90:
-		position.y -= speed
-	else:
-		print("goofy ahh")
+		position.y -= speed * dt
 
 func _on_Bullet_area_entered(area):
 	if area.is_in_group("Enemies"):

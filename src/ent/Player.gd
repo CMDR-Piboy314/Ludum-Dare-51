@@ -167,7 +167,7 @@ func update_anims():
 	
 	if anim_dir == dir.F:
 		dir_name = "f"
-	elif anim_dir == dir.B:
+	elif anim_dir == dir.B: 
 		dir_name = "b"
 	elif anim_dir == dir.L:
 		dir_name = "l"
