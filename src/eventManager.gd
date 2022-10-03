@@ -3,18 +3,22 @@ extends Node
 func _process(_delta):
 	if globals.eventNeeded:
 		randomize()
-		var random = randi() % 3
+		var random = randi() % 7
 		
 		if random == 0:
 			globals.invertCamera = !globals.invertCamera
 			globals.invertControls = false
 
-		if random == 1:
+		if random == 1 or random == 2:
 			globals.invertControls = !globals.invertControls
 			globals.invertCamera = false
 
-		if random == 2:
+		if random == 3 or random == 4:
 			globals.spawnPoint_enemyType = globals.enemyTypes.GHOST
+			globals.spawnPoint_spawn = true
+
+		if random == 5 or random == 6:
+			globals.spawnPoint_enemyType = globals.enemyTypes.ZOMBIE
 			globals.spawnPoint_spawn = true
 		
 		globals.eventNeeded = false
