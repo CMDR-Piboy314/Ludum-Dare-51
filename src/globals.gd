@@ -11,6 +11,7 @@ var invertControls = false
 var invertCamera = false
 
 var playerHealth = 100
+var playerIsHovering = false
 
 enum inventoryItems {
 	NONE,

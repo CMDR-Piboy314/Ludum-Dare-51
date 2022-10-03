@@ -165,6 +165,7 @@ tracks/0/keys = {
 }
 
 [node name="Zombie" type="RigidBody2D"]
+mass = 2.04082
 gravity_scale = 0.0
 script = ExtResource( 1 )
 dead_modulate = Color( 0.988235, 0.576471, 0.576471, 1 )

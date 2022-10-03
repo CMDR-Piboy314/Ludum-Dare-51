@@ -22,23 +22,23 @@ func _input(_event):
 			match colour:
 				colours.YELLOW:
 					if globals.playerInventory != globals.inventoryItems.KEY_YELLOW:
-						pass
+						return
 				
 				colours.RED:
 					if globals.playerInventory != globals.inventoryItems.KEY_RED:
-						pass
+						return
 				
 				colours.PURPLE:
 					if globals.playerInventory != globals.inventoryItems.KEY_PURPLE:
-						pass
+						return
 				
 				colours.GREEN:
 					if globals.playerInventory != globals.inventoryItems.KEY_GREEN:
-						pass
+						return
 				
 				colours.ORANGE:
 					if globals.playerInventory != globals.inventoryItems.KEY_ORANGE:
-						pass
+						return
 			
 			opened = true
 			

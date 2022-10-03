@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://res/img/ent/tiles/tiles01.png" type="Texture" id=1]
 [ext_resource path="res://scn/ent/Player.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://scn/ent/Boombox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scn/ent/End.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scn/ent/enemies/Zombie.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scn/ent/Pistol.tscn" type="PackedScene" id=16]
 
 [sub_resource type="OccluderPolygon2D" id=45]
 polygon = PoolVector2Array( 9, 16, 9, 9, 16, 9, 16, 0, 0, 0, 0, 16 )
@@ -463,6 +464,11 @@ position = Vector2( 134, 372 )
 
 [node name="Key" parent="Keys" instance=ExtResource( 11 )]
 position = Vector2( -4, 185 )
+
+[node name="Pistols" type="Node2D" parent="."]
+
+[node name="Pistol" parent="Pistols" instance=ExtResource( 16 )]
+position = Vector2( 116, 372 )
 
 [node name="Boomboxes" type="Node2D" parent="."]
 

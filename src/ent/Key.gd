@@ -45,10 +45,13 @@ func _process(_dt):
 			colours.ORANGE:
 				$Sprite.frame = 5
 
-func _on_Key_body_entered(body):
+func _on_Key_area_entered(body):
 	if body.is_in_group("Player"):
+		print("hovering")
+		globals.playerIsHovering = true
 		pickable = true
 
-func _on_Key_body_exited(body):
+func _on_Key_area_exited(body):
 	if body.is_in_group("Player"):
+		globals.playerIsHovering = false
 		pickable = false

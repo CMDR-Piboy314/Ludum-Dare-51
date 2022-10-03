@@ -18,6 +18,9 @@ func _process(_delta):
 		
 	if globals.playerInventory == globals.inventoryItems.KEY_ORANGE:
 		self.texture = preload("res://res/img/UI/keyOrange.png")
+	
+	if globals.playerInventory == globals.inventoryItems.PISTOL:
+		self.texture = preload("res://res/img/UI/pistol.png")
 
 
 # Declare member variables here. Examples:

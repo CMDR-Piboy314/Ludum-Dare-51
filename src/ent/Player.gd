@@ -54,8 +54,9 @@ func _process(_dt):
 	if shooting:
 		return
 	
-	if Input.is_action_just_pressed("shoot") && globals.playerInventory == globals.inventoryItems.PISTOL:
-		shoot()
+	if globals.playerIsHovering == false:
+		if Input.is_action_just_pressed("shoot") && globals.playerInventory == globals.inventoryItems.PISTOL:
+			shoot()
 	
 	update_anims()
 
