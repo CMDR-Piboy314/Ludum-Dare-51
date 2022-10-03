@@ -51,6 +51,8 @@ func _physics_process(_dt):
 	velocity = move_and_slide(velocity)
 
 func _process(_dt):
+	globals.playerPos = global_position
+	
 	if shooting:
 		return
 	

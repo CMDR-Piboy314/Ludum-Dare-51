@@ -47,7 +47,6 @@ func _process(_dt):
 
 func _on_Key_area_entered(body):
 	if body.is_in_group("Player"):
-		print("hovering")
 		globals.playerIsHovering = true
 		pickable = true
 

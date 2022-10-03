@@ -43,6 +43,7 @@ func _input(_event):
 			opened = true
 			
 			globals.playerInventory = globals.inventoryItems.NONE
+			globals.itemWasUsed = true
 
 func _process(_dt):
 	if Engine.editor_hint:
