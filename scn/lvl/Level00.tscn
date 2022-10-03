@@ -432,7 +432,6 @@ outlines = [ PoolVector2Array( 105, 143, 105, 32, 96, 31, 96, 21, -54, 19, -56, 
 script = ExtResource( 7 )
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 8 )]
-visible = false
 
 [node name="WallsNFloor" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
