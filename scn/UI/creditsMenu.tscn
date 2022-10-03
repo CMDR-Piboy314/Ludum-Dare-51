@@ -63,24 +63,24 @@ margin_right = 116.0
 margin_bottom = 55.5
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[color=#0025c9]DUFRESNEX -
-        MAIN ARTIST,
-        MUSIC COMPOSER AND SFX[/color]
-[color=#ebd300]PIBOY314 -
+bbcode_text = "[color=#ebd300]PIBOY314 -
         MAIN PROGRAMMER
         SECONDARY ARTIST[/color]
 [color=#ff005d]CMDR-JOHNALEX -
         UI, LEVEL CREATOR,
-        SECONDARY PROGRAMMER[/color]"
-text = "DUFRESNEX -
+        SECONDARY PROGRAMMER[/color]
+[color=#0025c9]DUFRESNEX -
         MAIN ARTIST,
-        MUSIC COMPOSER AND SFX
-PIBOY314 -
+        MUSIC COMPOSER AND SFX[/color]"
+text = "PIBOY314 -
         MAIN PROGRAMMER
         SECONDARY ARTIST
 CMDR-JOHNALEX -
         UI, LEVEL CREATOR,
-        SECONDARY PROGRAMMER"
+        SECONDARY PROGRAMMER
+DUFRESNEX -
+        MAIN ARTIST,
+        MUSIC COMPOSER AND SFX"
 
 [node name="Label" type="Label" parent="."]
 visible = false
