@@ -71,7 +71,7 @@ Piboy314 -
     Main programming
     Other art
 CMDR-JohnAlex -
-    UI"
+    UI and level designer"
 uppercase = true
 
 [connection signal="pressed" from="BackBtn" to="BackBtn" method="_on_BackBtn_pressed"]
