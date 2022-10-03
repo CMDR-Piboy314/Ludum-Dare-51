@@ -8,7 +8,6 @@
 [ext_resource path="res://src/ui/Buttons.gd" type="Script" id=6]
 [ext_resource path="res://scn/lvl/Level01.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scn/UI/creditsMenu.tscn" type="PackedScene" id=8]
-[ext_resource path="res://res/img/pumpkin.png" type="Texture" id=9]
 [ext_resource path="res://src/ui/Pumpkin.gd" type="Script" id=10]
 [ext_resource path="res://res/sfx/mus/GameNameHere.mp3" type="AudioStream" id=11]
 
@@ -43,6 +42,9 @@ Button/styles/focus = SubResource( 14 )
 Button/styles/hover = SubResource( 15 )
 Button/styles/normal = SubResource( 16 )
 Button/styles/pressed = SubResource( 17 )
+
+[sub_resource type="StreamTexture" id=18]
+load_path = "res://.import/pumpkin.png-e885c0000b83620a8fd4a81a7f7df5e4.stex"
 
 [sub_resource type="Animation" id=9]
 length = 0.001
@@ -95,6 +97,7 @@ tracks/0/keys = {
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -66, 175 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -207,7 +210,7 @@ uppercase = true
 
 [node name="Pumpkin" type="Sprite" parent="."]
 position = Vector2( 16, 110 )
-texture = ExtResource( 9 )
+texture = SubResource( 18 )
 hframes = 6
 vframes = 5
 script = ExtResource( 10 )
