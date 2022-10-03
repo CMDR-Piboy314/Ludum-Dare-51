@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/GameNameHere2.mp3-a2037cc83a45d67e1a12c6be338ba731.mp3str"
+
+[deps]
+
+source_file="res://res/sfx/mus/GameNameHere2.mp3"
+dest_files=[ "res://.import/GameNameHere2.mp3-a2037cc83a45d67e1a12c6be338ba731.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
