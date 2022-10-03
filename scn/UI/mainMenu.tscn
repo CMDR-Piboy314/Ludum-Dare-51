@@ -121,13 +121,13 @@ margin_right = 194.0
 stretch_mode = 4
 
 [node name="Temp" type="Label" parent="Menu"]
-margin_left = 39.0
+margin_left = 5.0
 margin_top = 4.0
-margin_right = 155.0
+margin_right = 188.0
 margin_bottom = 13.0
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 1 )
-text = "Game Name here"
+text = "The House of Gillamoor"
 align = 1
 valign = 1
 uppercase = true
