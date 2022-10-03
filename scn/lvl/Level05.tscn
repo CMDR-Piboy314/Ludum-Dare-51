@@ -713,7 +713,28 @@ visible = false
 script = ExtResource( 2 )
 ghost_scene = ExtResource( 5 )
 
-[node name="Position2D" type="Position2D" parent="SpawnPoints"]
-position = Vector2( 119, 113 )
+[node name="Position2D2" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -216, 120 )
+
+[node name="Position2D3" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -411, -88 )
+
+[node name="Position2D4" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -740, -343 )
+
+[node name="Position2D5" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -132, -512 )
+
+[node name="Position2D6" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 169, -613 )
+
+[node name="Position2D7" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 914, -294 )
+
+[node name="Position2D8" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 947, -758 )
+
+[node name="Position2D9" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 1736, -192 )
 
 [editable path="Boomboxes/Boombox2"]
