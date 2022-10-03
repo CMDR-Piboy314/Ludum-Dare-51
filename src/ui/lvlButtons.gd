@@ -37,30 +37,5 @@ func _on_lvl4Btn_pressed():
 
 
 func _on_lvl5Btn_pressed():
-	var _trash = get_tree().change_scene("res://scn/lvl/Level05.tscn")
-	pass # Replace with function body.
-
-
-func _on_lvl6Btn_pressed():
-	var _trash = get_tree().change_scene("res://scn/lvl/Level06.tscn")
-	pass # Replace with function body.
-
-
-func _on_lvl7Btn_pressed():
-	var _trash = get_tree().change_scene("res://scn/lvl/Level07.tscn")
-	pass # Replace with function body.
-
-
-func _on_lvl8Btn_pressed():
-	var _trash = get_tree().change_scene("res://scn/lvl/Level08.tscn")
-	pass # Replace with function body.
-
-
-func _on_lvl9Btn_pressed():
-	var _trash = get_tree().change_scene("res://scn/lvl/Level09.tscn")
-	pass # Replace with function body.
-
-
-func _on_lvl10Btn_pressed():
-	var _trash = get_tree().change_scene("res://scn/lvl/Level10.tscn")
+	var _trash = get_tree().change_scene("res://scn/lvl/Level00.tscn")
 	pass # Replace with function body.

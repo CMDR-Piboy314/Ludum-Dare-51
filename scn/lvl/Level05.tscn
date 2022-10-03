@@ -453,7 +453,6 @@ outlines = [ PoolVector2Array( 1813, -634, 1812, -677, 1616, -678, 1604, -678, 1
 script = ExtResource( 3 )
 
 [node name="CameraEffect" parent="." instance=ExtResource( 6 )]
-visible = false
 
 [node name="WallsNFloor" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
