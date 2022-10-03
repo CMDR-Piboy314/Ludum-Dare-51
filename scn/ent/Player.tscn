@@ -172,6 +172,18 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 bullet_scene = ExtResource( 5 )
 
+[node name="DustParticles" type="CPUParticles2D" parent="."]
+position = Vector2( 0, 15 )
+emitting = false
+amount = 4
+lifetime = 0.25
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 30.0
+color = Color( 0.105882, 0, 0.231373, 1 )
+hue_variation = 0.01
+hue_variation_random = 0.35
+
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 hframes = 8

@@ -154,7 +154,14 @@ func set_anim(name, dir):
 		$AnimationPlayer.play("RESET")
 		$AnimationPlayer.play("walk" + '_' + dir)
 		$AnimationPlayer.stop()
+		$DustParticles.emitting = false
+		
 	else:
+		if name == "walk":
+			$DustParticles.emitting = true
+		else:
+			$DustParticles.emitting = false
+		
 		$AnimationPlayer.play(name + '_' + dir)
 
 func update_anims():
