@@ -449,11 +449,10 @@ vertices = PoolVector2Array( 1812, -677, 1813, -634, 1631, -639, 1616, -678, 152
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 4, 8, 11 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 16, 15, 14, 17 ), PoolIntArray( 16, 17, 18, 19 ), PoolIntArray( 20, 19, 18, 21, 22 ), PoolIntArray( 23, 24, 25, 20 ), PoolIntArray( 26, 10, 9 ), PoolIntArray( 3, 2, 27, 28, 29, 30 ), PoolIntArray( 31, 32, 33, 26, 9, 34, 35, 36 ), PoolIntArray( 37, 31, 36, 30, 29 ), PoolIntArray( 38, 37, 29 ), PoolIntArray( 38, 29, 22, 21 ), PoolIntArray( 20, 22, 23 ) ]
 outlines = [ PoolVector2Array( 1813, -634, 1812, -677, 1616, -678, 1604, -678, 1605, -759, 1620, -765, 1620, -884, 1604, -896, 1605, -1043, 1584, -1045, 1584, -1062, 1307, -1062, 1306, -1034, 1527, -1035, 1531, -1021, 1531, -887, 1516, -884, 1514, -781, 1530, -769, 1530, -682, 1520, -677, 1191, -677, 1191, -790, 827, -789, 826, -456, 758, -454, 761, -409, 885, -410, 887, -734, 1130, -730, 1131, -427, 1379, -426, 1380, -470, 1186, -474, 1187, -637, 1563, -637, 1566, -614, 1620, -616, 1631, -639 ) ]
 
-[node name="Level01" type="Node2D"]
+[node name="Level02" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="CameraEffect" parent="." instance=ExtResource( 6 )]
-visible = false
 
 [node name="WallsNFloor" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -713,7 +712,28 @@ visible = false
 script = ExtResource( 2 )
 ghost_scene = ExtResource( 5 )
 
-[node name="Position2D" type="Position2D" parent="SpawnPoints"]
-position = Vector2( 119, 113 )
+[node name="Position2D2" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -216, 120 )
+
+[node name="Position2D3" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -411, -88 )
+
+[node name="Position2D4" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -740, -343 )
+
+[node name="Position2D5" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -132, -512 )
+
+[node name="Position2D6" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 169, -613 )
+
+[node name="Position2D7" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 914, -294 )
+
+[node name="Position2D8" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 947, -758 )
+
+[node name="Position2D9" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 1736, -192 )
 
 [editable path="Boomboxes/Boombox2"]
